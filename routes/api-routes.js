@@ -39,7 +39,6 @@ module.exports = function (app) {
           res.json(err);
         })
   })
-//doesnt want to connect my delete route
     app.delete('/api/todoItems/:id', function (req, res) {
       db.todoItems.findOneAndDelete({_id: req.params.id})
         .then(function () {
